@@ -1,51 +1,32 @@
-# PCA: EXP-1  SUM ARRAY GPU
-<h3>ENTER YOUR NAME: HARINI P</h3>
-<h3>ENTER YOUR REGISTER NO: 212224230082</h3>
-<h3>EX. NO:3</h3>
-<h3>DATE:08-08-2026</h3>
-<h1> <align=center> SUM ARRAY ON HOST AND DEVICE </h3>
-PCA-GPU-based-vector-summation.-Explore-the-differences.
-i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
-
+# PCA: EXP-1 SUM ARRAY GPU
+## ENTER YOUR NAME: HARINI P
+ENTER YOUR REGISTER NO: 212224230082
+EX. NO:3
+DATE:08-08-2026
+SUM ARRAY ON HOST AND DEVICE
+PCA-GPU-based-vector-summation.-Explore-the-differences. i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
 ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
-## AIM:
 
+AIM:
 To perform vector addition on host and device.
 
-## EQUIPMENTS REQUIRED:
-Hardware – PCs with NVIDIA GPU & CUDA NVCC
-Google Colab with NVCC Compiler
+EQUIPMENTS REQUIRED:
+Hardware – PCs with NVIDIA GPU & CUDA NVCC Google Colab with NVCC Compiler
 
-
-
-
-## PROCEDURE:
-
-1. Initialize the device and set the device properties.
-2. Allocate memory on the host for input and output arrays.
-3. Initialize input arrays with random values on the host.
-4. Allocate memory on the device for input and output arrays, and copy input data from host to device.
-5. Launch a CUDA kernel to perform vector addition on the device.
-6. Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
-
-## PROGRAM and OUTPUT:
-```
+PROCEDURE:
+Initialize the device and set the device properties.
+Allocate memory on the host for input and output arrays.
+Initialize input arrays with random values on the host.
+Allocate memory on the device for input and output arrays, and copy input data from host to device.
+Launch a CUDA kernel to perform vector addition on the device.
+Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
+PROGRAM and OUTPUT:
 !nvidia-smi
-```
-<img width="926" height="427" alt="image" src="https://github.com/user-attachments/assets/dde7d7ff-a541-4c69-8b87-2be2a3b7998c" />
-
-```
+image
 !pip install nvcc4jupyter
-```
-<img width="868" height="127" alt="image" src="https://github.com/user-attachments/assets/7c83e3bd-34ef-44cc-803e-304470a46278" />
-
-
-```
+image
 %load_ext nvcc4jupyter
-```
-<img width="683" height="66" alt="image" src="https://github.com/user-attachments/assets/3a984765-0ab4-47c6-ad67-f9b1567e8b44" />
-
-```
+image
 %%cuda
 #include <cuda_runtime.h> 
 #include <stdio.h>
@@ -302,9 +283,6 @@ int main(int argc, char **argv)
 
     return(0);
 }
-```
-<img width="760" height="177" alt="image" src="https://github.com/user-attachments/assets/09d03849-8014-4b41-b5b9-b04cfd833c06" />
-
-
-## RESULT:
+image
+RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
