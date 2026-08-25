@@ -27,7 +27,9 @@ Allocate memory on the device for input and output arrays, and copy input data f
 
 Launch a CUDA kernel to perform vector addition on the device.
 
-Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
+Copy output data from the device to the host and verify the results against the host's sequential vector addition.
+
+Free memory on the host and the device.
 
 ## PROGRAM and OUTPUT:
 !nvidia-smi
