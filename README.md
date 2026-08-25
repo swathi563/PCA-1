@@ -1,32 +1,44 @@
 # PCA: EXP-1 SUM ARRAY GPU
-## ENTER YOUR NAME: HARINI P
-ENTER YOUR REGISTER NO: 212224230082
-EX. NO:3
-DATE:08-08-2026
-SUM ARRAY ON HOST AND DEVICE
-PCA-GPU-based-vector-summation.-Explore-the-differences. i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
+## ENTER YOUR NAME: SWATHI S
+
+## ENTER YOUR REGISTER NO: 212225040449
+
+## DATE:25-08-2026
+
+## SUM ARRAY ON HOST AND DEVICE
+PCA-GPU-based-vector-summation.-Explore-the-differences. 
+i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
 ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
 
-AIM:
+## AIM:
 To perform vector addition on host and device.
 
-EQUIPMENTS REQUIRED:
+## EQUIPMENTS REQUIRED:
 Hardware – PCs with NVIDIA GPU & CUDA NVCC Google Colab with NVCC Compiler
 
-PROCEDURE:
+## PROCEDURE:
 Initialize the device and set the device properties.
+
 Allocate memory on the host for input and output arrays.
+
 Initialize input arrays with random values on the host.
+
 Allocate memory on the device for input and output arrays, and copy input data from host to device.
+
 Launch a CUDA kernel to perform vector addition on the device.
+
 Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
-PROGRAM and OUTPUT:
+
+## PROGRAM and OUTPUT:
 !nvidia-smi
-image
+<img width="912" height="427" alt="image" src="https://github.com/user-attachments/assets/532ea746-2cca-4738-a2aa-7806f274e1f4" />
+
 !pip install nvcc4jupyter
-image
+<img width="833" height="127" alt="image" src="https://github.com/user-attachments/assets/ec2f6bee-6d32-427d-ab98-24bf17c8d322" />
+
 %load_ext nvcc4jupyter
-image
+<img width="632" height="62" alt="image" src="https://github.com/user-attachments/assets/ca381510-9bf3-48fd-8337-e4a49540e4a2" />
+
 %%cuda
 #include <cuda_runtime.h> 
 #include <stdio.h>
@@ -283,6 +295,7 @@ int main(int argc, char **argv)
 
     return(0);
 }
-image
-RESULT:
+<img width="947" height="162" alt="image" src="https://github.com/user-attachments/assets/f2eadcac-df4a-45a1-ab6b-8ff30441bba6" />
+
+## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
